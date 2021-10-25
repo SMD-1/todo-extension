@@ -1,5 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.container {
+  width: 350px;
+  height: 350px;
+  padding: 20px;
+  border: 1px solid #000;
+  font-family: "Roboto", sans-serif;
+  overflow-y: auto;
+}
+.title {
+  text-align: center;
+}
+.new-item {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.new-item button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: #038cfc;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
+.new-item input {
+  padding: 5px;
+}
+.list {
+  font-size: 1.1rem;
+  list-style: none;
+  margin-top: 15px;
+}
+.listItem {
+  padding: 10px;
+  margin-top: 10px;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon span {
+  cursor: pointer;
 }
