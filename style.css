@@ -1,51 +1,174 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-* {
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
   padding: 0;
-  box-sizing: border-box;
-}
-.container {
-  width: 350px;
-  height: 350px;
-  padding: 20px;
-  border: 1px solid #000;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.1);
   font-family: "Roboto", sans-serif;
-  overflow-y: auto;
 }
-.title {
-  text-align: center;
-}
-.new-item {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.new-item button {
-  padding: 8px 15px;
-  border-radius: 5px;
-  background: #038cfc;
-  color: #fff;
-  font-weight: 600;
-  outline: none;
-  border: none;
-}
-.new-item input {
-  padding: 5px;
-}
-.list {
-  font-size: 1.1rem;
-  list-style: none;
-  margin-top: 15px;
-}
-.listItem {
+
+/* ------------ container ------------ */
+.container {
   padding: 10px;
-  margin-top: 10px;
-  border-bottom: 2px solid #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 350px;
+  margin: 0 auto;
 }
-.icon span {
+
+/* ------------ header ------------ */
+.header {
+  width: 370px;
+  height: 200px;
+  background-image: url("bg2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* border-radius: 15px 15px 0 0; */
+  position: relative;
+}
+.clear {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.clear i {
+  font-size: 25px;
+  color: #fff;
+}
+.clear i:hover {
   cursor: pointer;
+  text-shadow: 1px 3px 5px #000;
+  /* transform: rotate(45deg); */
+}
+#date {
+  position: absolute;
+  bottom: 10px;
+  /* width: 330px;
+    height: 30px; */
+  left: 20px;
+  color: #fff;
+  font-size: 25px;
+}
+
+/* ------------ content ------------ */
+.content {
+  width: 370px;
+  height: 450px;
+  max-height: 450px;
+  background-color: #fff;
+  overflow: auto;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+.content ul {
+  padding: 0;
+  margin: 0;
+}
+.item {
+  width: 370px;
+  height: 50px;
+  min-height: 50px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.item i.co {
+  position: absolute;
+  font-size: 25px;
+  padding-left: 5px;
+  left: 15px;
+  top: 10px;
+}
+.item i.co:hover {
+  cursor: pointer;
+}
+.fa-check-circle {
+  color: #6bad00;
+}
+.item p.text {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  left: 50px;
+  top: 10px;
+  background-color: #fff;
+  max-width: 285px;
+}
+.lineThrough {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.item i.de {
+  position: absolute;
+  font-size: 25px;
+  right: 15px;
+  top: 10px;
+}
+.item i.de:hover {
+  color: #ff0000;
+  cursor: pointer;
+}
+/* ------------ add item ------------ */
+.add-to-do {
+  position: relative;
+  width: 350px;
+  height: 40px;
+  background-color: #fff;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.add-to-do i {
+  position: absolute;
+  font-size: 40px;
+  color: #008079;
+}
+
+.add-to-do input {
+  position: absolute;
+  left: 50px;
+  height: 35px;
+  width: 300px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  outline: none;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.add-to-do input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #001fa8;
+  opacity: 0.5;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.add-to-do input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #4162f6;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.add-to-do input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #4162f6;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+.add-to-do input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #4162f6;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 }
