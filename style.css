@@ -12,6 +12,8 @@ body {
   padding: 10px;
   width: 350px;
   margin: 0 auto;
+  border: none;
+  outline: none;
 }
 
 /* ------------ header ------------ */
@@ -53,7 +55,7 @@ body {
 /* ------------ content ------------ */
 .content {
   width: 370px;
-  height: 450px;
+  height: 320px;
   max-height: 450px;
   background-color: #fff;
   overflow: auto;
